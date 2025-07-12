@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Codemaster Academy</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="https://placehold.co/40x40/ffffff/1a4a72?text=CMA" alt="Codemaster Academy Logo" class="me-2 rounded-circle">
+        Codemaster Academy
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,31 +27,73 @@
           <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
           <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Course Details -->
-  <div class="container mt-5">
-    <h1>Data Science & Analytics</h1>
-    <p>
-      Become a data-driven decision maker. Learn data analysis, visualization, and machine learning tools and techniques.
+  <div class="container mt-5 py-5">
+    <h1 class="text-center mb-4">Data Science & Analytics</h1>
+    <p class="lead text-center mb-5">
+      Become a data-driven decision maker. Learn data analysis, visualization, and machine learning tools and techniques to extract insights and drive business growth.
     </p>
-    <h3>Course Highlights:</h3>
-    <ul>
-      <li>Python for Data Science</li>
-      <li>Data wrangling, visualization (Pandas, Matplotlib, Seaborn)</li>
-      <li>Statistics & Probability</li>
-      <li>Machine Learning algorithms</li>
-      <li>SQL, Excel, Tableau basics</li>
-      <li>Capstone project & Placement support</li>
-    </ul>
-    <h3>Duration:</h3>
-    <p>4 Months</p>
-    <h3>Eligibility:</h3>
-    <p>Any graduate or undergraduate with basic programming/statistics knowledge</p>
-    <a href="contact.html" class="btn btn-primary mt-3">Enroll Now</a>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Course Highlights:</h3>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Python for Data Science (NumPy, Pandas, SciPy)</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Data Wrangling, Cleaning, and Preprocessing</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Data Visualization with Matplotlib, Seaborn, and Tableau Basics</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Statistics & Probability for Data Science</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Machine Learning Algorithms (Supervised, Unsupervised, Regression, Classification)</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>SQL for Data Analysis</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Capstone Project & Real-world Case Studies</li>
+          <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Career Guidance & Placement Support</li>
+        </ul>
+
+        <h3>Duration:</h3>
+        <p><strong>4 Months</strong> (Approx. 320+ hours of training)</p>
+        
+        <h3>Eligibility:</h3>
+        <p>Any graduate or undergraduate with basic programming or statistics knowledge. No prior data science experience required.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Why This Course?</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Data Science is a rapidly growing field with high demand.</li>
+              <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Learn to make data-driven decisions and solve complex problems.</li>
+              <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Acquire skills for roles like Data Scientist, Data Analyst, ML Engineer.</li>
+              <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Build a strong portfolio with practical projects.</li>
+            </ul>
+            <hr>
+            <a href="contact.html?reason=enroll" class="btn btn-primary w-100 mb-2">Enroll Now</a>
+            <a href="contact.html?reason=demo" class="btn btn-outline-primary w-100">Book a Free Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial specific to this course -->
+    <div class="card p-4 mt-5 bg-light shadow-sm">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://placehold.co/80x80/1a4a72/ffffff?text=Student" class="rounded-circle me-3" alt="Student Testimonial">
+          <div>
+            <h5 class="mb-0">Deepa Singh</h5>
+            <p class="text-muted mb-0">Data Scientist at Analytics Firm</p>
+          </div>
+        </div>
+        <p class="fst-italic">"The Data Science program was incredibly insightful. The trainers made complex topics easy to understand, and the focus on real-world applications truly prepared me for my role as a Data Scientist."</p>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->
