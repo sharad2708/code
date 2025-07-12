@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Codemaster Academy</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="https://placehold.co/40x40/ffffff/1a4a72?text=CMA" alt="Codemaster Academy Logo" class="me-2 rounded-circle">
+        Codemaster Academy
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,24 +27,97 @@
           <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
           <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- About Section -->
-  <div class="container mt-5">
-    <h1>About Codemaster Academy</h1>
-    <p>
-      Codemaster Academy is a leading IT training institute dedicated to empowering individuals with the latest technology skills needed for today’s job market. 
-      Our trainers are industry professionals with real-world experience, ensuring that you get practical and relevant knowledge.
+  <div class="container mt-5 py-5">
+    <h1 class="text-center mb-4">About Codemaster Academy</h1>
+    <p class="lead text-center mb-5">
+      Codemaster Academy is a premier IT training institute dedicated to shaping the next generation of technology professionals.
+      We believe in empowering individuals with cutting-edge skills and practical knowledge to thrive in today's dynamic job market.
     </p>
-    <ul>
-      <li>Industry-focused curriculum</li>
-      <li>Hands-on training & live projects</li>
-      <li>Career guidance and placement assistance</li>
-      <li>Flexible learning options</li>
-    </ul>
+
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h3>Our Mission</h3>
+        <p>
+          To provide high-quality, industry-relevant IT education that bridges the gap between academic learning and industry demands.
+          We are committed to fostering a learning environment that promotes innovation, critical thinking, and practical application of skills.
+        </p>
+        <h3>Our Vision</h3>
+        <p>
+          To be the leading IT training provider, recognized for our excellence in education, student success, and contribution to the tech community.
+          We aim to create a global pool of skilled IT professionals ready to tackle real-world challenges.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://placehold.co/600x400/1a4a72/ffffff?text=Our+Academy" class="img-fluid rounded shadow-sm" alt="Our Academy">
+      </div>
+    </div>
+
+    <h2 class="text-center mb-4">What Makes Us Different?</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Industry-Experienced Trainers</h5>
+            <p class="card-text">Learn from professionals who have worked on real-world projects and bring their expertise to the classroom.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Practical & Project-Based Learning</h5>
+            <p class="card-text">Our curriculum emphasizes hands-on training, live projects, and case studies to ensure practical skill development.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Career-Focused Approach</h5>
+            <p class="card-text">From resume building to interview preparation, we provide end-to-end career guidance and placement assistance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">State-of-the-Art Facilities</h5>
+            <p class="card-text">Access modern labs, high-speed internet, and a conducive learning environment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Flexible Learning Options</h5>
+            <p class="card-text">Choose between classroom and online training modes to fit your schedule and learning style.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-users-cog fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Post-Training Support</h5>
+            <p class="card-text">We offer ongoing support and mentorship even after course completion to ensure your continued success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
