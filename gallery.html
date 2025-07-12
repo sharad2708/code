@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Codemaster Academy</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="https://placehold.co/40x40/ffffff/1a4a72?text=CMA" alt="Codemaster Academy Logo" class="me-2 rounded-circle">
+        Codemaster Academy
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,26 +27,79 @@
           <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
           <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container mt-5">
-    <h1>Gallery</h1>
+
+  <div class="container mt-5 py-5">
+    <h1 class="text-center mb-5">Our Moments & Milestones</h1>
+    <p class="lead text-center mb-5">
+      Explore glimpses of life at Codemaster Academy – from interactive classroom sessions and engaging seminars to successful project presentations and student achievements.
+    </p>
+
     <div class="row">
       <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/400x250?text=Seminar+Event" class="img-fluid rounded" alt="Seminar Event">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Seminar+Event" class="card-img-top" alt="Seminar Event">
+          <div class="card-body">
+            <h5 class="card-title">Industry Expert Seminar</h5>
+            <p class="card-text">Our students engaging with a guest speaker from a leading tech company.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/400x250?text=Classroom+Session" class="img-fluid rounded" alt="Classroom Session">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Classroom+Session" class="card-img-top" alt="Classroom Session">
+          <div class="card-body">
+            <h5 class="card-title">Interactive Classroom Session</h5>
+            <p class="card-text">A lively coding session where concepts come to life.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="https://via.placeholder.com/400x250?text=Project+Presentation" class="img-fluid rounded" alt="Project Presentation">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Project+Presentation" class="card-img-top" alt="Project Presentation">
+          <div class="card-body">
+            <h5 class="card-title">Student Project Presentation</h5>
+            <p class="card-text">Showcasing innovative projects developed by our talented students.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Graduation+Day" class="card-img-top" alt="Graduation Day">
+          <div class="card-body">
+            <h5 class="card-title">Graduation Ceremony</h5>
+            <p class="card-text">Celebrating the success and achievements of our graduating batch.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Lab+Session" class="card-img-top" alt="Lab Session">
+          <div class="card-body">
+            <h5 class="card-title">Hands-on Lab Session</h5>
+            <p class="card-text">Students gaining practical experience in our modern computer labs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://placehold.co/400x250/1a4a72/ffffff?text=Workshop" class="card-img-top" alt="Workshop">
+          <div class="card-body">
+            <h5 class="card-title">Coding Workshop</h5>
+            <p class="card-text">An intensive workshop focused on advanced coding techniques.</p>
+          </div>
+        </div>
       </div>
       <!-- Add more images as needed -->
     </div>
   </div>
+
   <footer class="bg-primary text-white mt-5 p-4 text-center">
     &copy; 2025 Codemaster Academy. All rights reserved.
   </footer>
