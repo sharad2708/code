@@ -1,27 +1,26 @@
 /* Custom CSS for the larger navbar logo */
 .navbar-logo-lg {
-  width: 70px;   /* Adjust this value to make the logo bigger */
-  height: 70px;  /* Keep width and height the same for a perfect circle */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
 }
 
-/* Custom CSS for the larger navbar brand text */
+/* Custom CSS for the navbar brand text (now smaller) */
 .navbar-brand-lg {
-  font-size: 1.75rem; /* Makes the font bigger */
-  font-weight: bold; /* Makes the font bolder for emphasis */
+  font-size: 1rem; /* Adjust this value to make the font smaller. Default is usually around 1.25rem. */
+  font-weight: normal; /* You can set this to 'normal' if you don't want it bold */
 }
 
 /* Hero Section with Background Image and Transparent Overlay */
 .hero-section {
-  position: relative; /* Needed for the pseudo-element overlay */
-  /* Replace 'path/to/your/image.jpg' with your actual background image URL */
-  background-image: url('https://via.placeholder.com/1920x600/003d7a/e0f2f7?text=Coding+Background'); /* Placeholder image, replace with your own */
+  position: relative;
+  background-image: url('https://via.placeholder.com/1920x600/003d7a/e0f2f7?text=Coding+Background');
   background-size: cover;
   background-position: center;
-  color: white; /* Ensures text is visible on the dark background */
-  padding-top: 100px; /* Adjust padding if needed due to image */
-  padding-bottom: 100px; /* Adjust padding if needed due to image */
-  overflow: hidden; /* Ensures nothing overflows */
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
 }
 
 /* The semi-transparent color overlay */
@@ -32,8 +31,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay (adjust the 0.5 for more or less transparency) */
-  z-index: 1; /* Place it above the image but below the content */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* Ensure the text and buttons are on top of the overlay */
@@ -54,14 +53,14 @@
 
 /* Adjust Testimonial Carousel indicators */
 #testimonialCarousel .carousel-indicators button {
-    background-color: #007bff; /* Primary color for active indicator */
+    background-color: #007bff;
 }
 #testimonialCarousel .carousel-indicators .active {
-    background-color: #0056b3; /* Darker shade for active */
+    background-color: #0056b3;
 }
 
 /* Adjust Testimonial Carousel controls */
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-    filter: invert(1); /* Makes icons white if they are dark */
+    filter: invert(1);
 }
