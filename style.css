@@ -1,73 +1,200 @@
-/* Custom CSS for the larger navbar logo */
-.navbar-logo-lg {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+/* General Body and HTML Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
 }
 
+/* Primary Color Definition (adjust as needed) */
+.bg-primary {
+    background-color: #007bff !important; /* Bootstrap primary blue */
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+/* Navbar Styling */
 /* This rule will apply to all <img> tags within a .navbar-brand */
 .navbar-brand img {
-    width: 70px;   /* Adjust this value for the desired large size */
-    height: 70px;  /* Keep height and width same for perfect circle */
+    width: 70px;   /* Set desired size for the logo */
+    height: 70px;  /* Keep width and height equal for a perfect circle */
     object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 50%; /* Explicitly ensure roundness */
 }
 
-/* Custom CSS for the navbar brand text (now smaller) */
-.navbar-brand-lg {
-  font-size: 1.2rem; /* Adjust this value to make the font smaller. Default is usually around 1.25rem. */
-  font-weight: normal; /* You can set this to 'normal' if you don't want it bold */
+.navbar-brand {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-weight: bold; /* Make the brand text bolder */
 }
 
-/* Hero Section with Background Image and Transparent Overlay */
+.nav-link {
+    font-weight: 500; /* Slightly bolder nav links */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.nav-link:hover {
+    color: #e2e6ea !important; /* Lighter color on hover */
+}
+
+/* Hero Section Styling */
 .hero-section {
-  position: relative;
-  background-image: url('img/bg.png');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  overflow: hidden;
+    position: relative;
+    /* Combined background: first layer is the semi-transparent overlay, second is your image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bg.png');
+    background-size: cover; /* Applies to both layers */
+    background-position: center; /* Applies to both layers */
+    background-repeat: no-repeat; /* Applies to both layers */
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
 }
 
-/* The semi-transparent color overlay */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
+/* Removed the ::before pseudo-element as its function is now integrated into background-image */
 
 /* Ensure the text and buttons are on top of the overlay */
 .hero-section .container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
 }
 
-/* General card styling (optional, for better shadow effect) */
+/* Why Choose Us Section - Card Styling */
 .card {
     border: none;
+    border-radius: 15px; /* Rounded corners for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    overflow: hidden; /* Ensures content stays within rounded corners */
 }
 
-/* Remove margin from the last button in hero section if it's not needed */
-.hero-section .btn-lg:last-child {
-    margin-right: 0 !important;
+.card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* Stronger shadow on hover */
 }
 
-/* Adjust Testimonial Carousel indicators */
+.card-body {
+    padding: 2rem;
+}
+
+.card-body i.fas {
+    color: #007bff; /* Primary color for icons */
+    margin-bottom: 1rem;
+    font-size: 3.5rem; /* Slightly larger icons */
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #6c757d; /* Muted text color */
+}
+
+/* Testimonials Section */
+#testimonialCarousel .carousel-item {
+    padding: 2rem 0;
+}
+
+#testimonialCarousel .carousel-item img {
+    border: 4px solid #007bff; /* Primary color border for profile images */
+    width: 120px; /* Larger testimonial images */
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
 #testimonialCarousel .carousel-indicators button {
-    background-color: #007bff;
+    background-color: #007bff; /* Primary color for indicators */
 }
+
 #testimonialCarousel .carousel-indicators .active {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker primary for active indicator */
 }
 
 /* Adjust Testimonial Carousel controls */
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-    filter: invert(1);
+    filter: invert(1); /* Makes them white */
+}
+
+/* Call to Action Section */
+.p-5.bg-primary {
+    background-color: #007bff !important; /* Ensure primary color */
+    border-radius: 15px !important; /* Rounded corners */
+    padding: 3rem !important; /* More padding */
+}
+
+.p-5.bg-primary .btn-light {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 30px; /* Pill-shaped button */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.p-5.bg-primary .btn-light:hover {
+    background-color: #e2e6ea; /* Slightly darker white on hover */
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+/* Contact Page Specific Styles (from your contact.html) */
+.map-placeholder {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Light border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d; /* Muted text color */
+    font-style: italic;
+    height: 250px; /* As defined in your HTML */
+    width: 100%;
+    border-radius: .25rem; /* Bootstrap's rounded corners */
+}
+
+/* Form Styling */
+.form-label {
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+    border-radius: 0.5rem; /* Slightly rounded form elements */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Smaller heading on small screens */
+    }
+    .hero-section p.lead {
+        font-size: 1rem; /* Smaller lead text on small screens */
+    }
+    .p-5.bg-primary {
+        padding: 2rem !important;
+    }
 }
