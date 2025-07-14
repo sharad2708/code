@@ -5,11 +5,11 @@
   object-fit: cover;
 }
 
+/* This rule will apply to all <img> tags within a .navbar-brand */
 .navbar-brand img {
-    width: 70px;   /* Adjust this value for desired size */
+    width: 70px;   /* Adjust this value for the desired large size */
     height: 70px;  /* Keep height and width same for perfect circle */
     object-fit: cover; /* Ensures the image fills the space without distortion */
-    /* You already have .rounded-circle in HTML, which handles the roundness */
 }
 
 /* Custom CSS for the navbar brand text (now smaller) */
