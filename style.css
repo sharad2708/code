@@ -21,7 +21,7 @@
 /* Hero Section with Background Image and Transparent Overlay */
 .hero-section {
   position: relative;
-  background-image: url('https://via.placeholder.com/1920x600/003d7a/e0f2f7?text=Coding+Background');
+  background-image: url('img/bg.png');
   background-size: cover;
   background-position: center;
   color: white;
