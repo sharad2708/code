@@ -81,7 +81,7 @@ body {
 .card-body i.fas {
     color: #007bff; /* Primary color for icons */
     margin-bottom: 1rem;
-    font-size: 3.5rem; /* Slightly larger icons */
+    font-size: 2rem; /* Slightly larger icons */
 }
 
 .card-title {
