@@ -48,36 +48,36 @@
           <div class="card-body">
             <h5 class="card-title mb-4">Send Us a Message</h5>
             <form action="https://formspree.io/f/xyzpygbg" method="POST">
-  <div class="mb-3">
-    <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
-    <input type="text" class="form-control" name="name" id="fullName" required>
-  </div>
-  <div class="mb-3">
-    <label for="emailAddress" class="form-label">Email address <span class="text-danger">*</span></label>
-    <input type="email" class="form-control" name="email" id="emailAddress" required>
-  </div>
-  <div class="mb-3">
-    <label for="contactNumber" class="form-label">Contact Number</label>
-    <input type="tel" class="form-control" name="contact" id="contactNumber">
-  </div>
-  <div class="mb-3">
-    <label for="reasonForContact" class="form-label">Reason for Contact <span class="text-danger">*</span></label>
-    <select class="form-select" name="reason" id="reasonForContact" required>
-      <option value="">Select a reason</option>
-      <option value="general_inquiry">General Inquiry</option>
-      <option value="course_details">Course Details</option>
-      <option value="placement_inquiry">Placement Inquiry</option>
-      <option value="book_demo">Book a Free Demo Lecture</option>
-      <option value="feedback">Feedback</option>
-    </select>
-  </div>
-  <div class="mb-3">
-    <label for="message" class="form-label">Your Message <span class="text-danger">*</span></label>
-    <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary w-100">Send Message</button>
-</form>
-<div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="name" id="fullName" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailAddress" class="form-label">Email address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email" id="emailAddress" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactNumber" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" name="contact" id="contactNumber" placeholder="e.g., +91 9876543210">
+              </div>
+              <div class="mb-3">
+                <label for="reasonForContact" class="form-label">Reason for Contact <span class="text-danger">*</span></label>
+                <select class="form-select" name="reason" id="reasonForContact" required>
+                  <option value="">Select a reason</option>
+                  <option value="general_inquiry">General Inquiry</option>
+                  <option value="course_details">Course Details</option>
+                  <option value="placement_inquiry">Placement Inquiry</option>
+                  <option value="book_demo">Book a Free Demo Lecture</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message <span class="text-danger">*</span></label>
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+            <div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Get the form element
-      const contactForm = document.getElementById('contactForm');
+      const contactForm = document.querySelector('#contactForm'); // Use querySelector for the form
       const formMessage = document.getElementById('formMessage');
       const reasonForContact = document.getElementById('reasonForContact');
 
@@ -133,12 +133,12 @@
         reasonForContact.value = 'placement_inquiry';
       }
 
-
       // Add event listener for form submission
+      // Note: If you are using Formspree (action="https://formspree.io/f/xyzpygbg"),
+      // Formspree will handle the actual submission and redirection/success message.
+      // The client-side validation below will still work before Formspree takes over.
       contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Basic form validation
+        // Basic client-side form validation
         const fullName = document.getElementById('fullName').value.trim();
         const emailAddress = document.getElementById('emailAddress').value.trim();
         const message = document.getElementById('message').value.trim();
@@ -148,10 +148,19 @@
           formMessage.style.display = 'block';
           formMessage.className = 'mt-3 alert alert-danger';
           formMessage.textContent = 'Please fill in all required fields.';
+          event.preventDefault(); // Prevent Formspree submission if validation fails
           return;
         }
 
-        // Simulate form submission (in a real scenario, you'd send this data to a server)
+        // If validation passes, allow Formspree to handle the submission.
+        // Formspree will typically redirect to a success page or show its own message.
+        // The console.log and manual success message below would be for a custom server-side handler.
+        // For Formspree, you usually don't need these client-side "success" messages after submission.
+        // Formspree will handle the UI feedback for success/failure.
+
+        // Example of what you'd do if you had your own backend:
+        /*
+        event.preventDefault(); // Keep this if you're handling AJAX submission yourself
         console.log('Form Submitted!');
         console.log('Full Name:', fullName);
         console.log('Email:', emailAddress);
@@ -159,18 +168,19 @@
         console.log('Reason:', selectedReason);
         console.log('Message:', message);
 
-        // Display success message
+        // Display success message (for custom backend)
         formMessage.style.display = 'block';
         formMessage.className = 'mt-3 alert alert-success';
         formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
 
-        // Optionally, clear the form
+        // Optionally, clear the form (for custom backend)
         contactForm.reset();
-        // Reset the URL parameter if present
+        // Reset the URL parameter if present (for custom backend)
         if (window.history.replaceState) {
           const newUrl = window.location.origin + window.location.pathname;
           window.history.replaceState({path:newUrl},'',newUrl);
         }
+        */
       });
     });
   </script>
